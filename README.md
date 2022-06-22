@@ -30,3 +30,8 @@ June 17: It Is Getting Close so thats when i started panicking because i still c
 June 18 - 19: started learniung about how the servo works and then i followed some internet tutorials
 
 June 20: now i need to start the program itself since i have a deadline to meet and i only have a few days left
+
+June 21: The Code is halfway complete, i programmed one servo to function now i just have to figure out the rest of them
+
+June 22: The Code is finished so the robotic arm is done and is ready to be presented, i just have to modify the code itself
+
