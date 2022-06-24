@@ -1,4 +1,72 @@
 # Robotic-Arm-Diary
+
+
+Robotic Arm Code
+
+}
+
+int main(void)
+{
+    OSC_config();               // Configure internal oscillator for 48 MHz
+    UBMP4_config();             // Configure on-board UBMP4 I/O devices
+    
+    // Servo output pin configuration
+    TRISC = 0b00000010;         // Set H1 as output for Servo1
+    TRISC = 0b00000100;         // Set H2 as output for Servo2
+	
+    while(1)
+	{
+        // Pulse timing test code
+//        servo_pulse(SERVO1,servo1Pos);
+        
+        // Read pushbuttons and adjust servo position
+        if(SW5 == 0 && servo1_pos > 0)
+        {
+            servo1_pos --;
+        }
+        
+        if(SW4 == 0 && servo1_pos < 255)
+        {
+            servo1_pos ++;
+        }
+
+        // Pulse timing test code
+//        servo_pulse(SERVO2,servo2Pos);
+        
+        // Read pushbuttons and adjust servo position
+        if(SW3 == 0 && servo2_pos > 0)
+        {
+            servo2_pos --;
+        }
+        
+        if(SW2 == 0 && servo2_pos < 255)
+        {
+            servo2_pos ++;
+        }
+        
+//        // Delay between servo pulses
+//        __delay_ms(15);
+        
+        // Delay between pushbutton updates
+        __delay_ms(4);
+
+        
+        // Activate bootloader if SW1 is pressed.
+        if(SW1 == 0)
+        {
+            RESET();
+        }
+    }
+}
+
+/* Learn More - Program Analysis Activities
+ * 
+ * 1. 
+ */
+ 
+ 
+ Diary:
+ 
 This Is Where my progress of my robotic arm project
 
 "Quick Note that there were pictures but they were lost"
